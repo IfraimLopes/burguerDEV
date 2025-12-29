@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurguerDEV</title>
+    <!--Link do CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--Img da Favicon-->
+    <link rel="icon" type="image/x-icon" href="img/eiliv-aceron-pu6b4yIlQF4-unsplash-removebg-preview.png">
+    <!--Link do JS-->
+    <script src="script.js" defer></script>
+    <!--Link do Mediaqueries-->
+    <link rel="stylesheet" href="queriesmedia.css">
+</head>
+<body>
+    <!--Área do Header-->
+    <header>
+        <a href="#" class="logo">🍔Burguer</a>
+        <!--Links de Navegação-->
+        <nav>
+            <a href="#inicio" class="howmobile">Início</a>
+            <a href="#cardapio" class="howmobile">Cardápio</a>
+            <a href="#sobre" class="howmobile">Sobre</a>
+            <a href="#contato" class="howmobile">Contato</a>
+            <a href="#" ><img onclick="showsibar()" class="howDesktop" src="img/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+        </nav>
+        <a href="#cardapio" class="btn howmobile">Peça Agora</a>
+    </header>
+
+     <header class="slidebar">
+          <a href="#" class="btn-menu" onclick="closesibar()"><img src="img/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+          
+        <!--Links de Navegação-->
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <a href="#cardapio" class="btn btn-m">Peça Agora</a>
+    </header>
+
+
+
+    <section id="inicio" class="hero-wrapper">
+        <article class="hero">
+            <div>
+                <h1>O Melhor Humburger da Cidade  </h1>
+                <p>Ingredientes frescos e sabor incomparável, feito com amor para você!</p>
+                
+                <nav class="hero-buttons">
+                    <a href="#cardapio" class="btn">Cardápio</a>
+                    <a href="https://wa.link/hqr4e9" target="_blank" class="btn btn-outline">WhatsApp</a>
+                </nav>
+           
+                <ul class="hero-stats">
+                    <li><strong>+500</strong> Clientes Felizes</li>
+                    <li><strong>+100</strong> Pedidos por Dia</li>
+                    <li><strong>+50</strong> Ingredientes Frescos</li>
+                </ul>
+
+            </div>
+            
+            <div class="mth">
+                <div class="imga">
+                    <img src="img/eiliv-aceron-pu6b4yIlQF4-unsplash-removebg-preview.png" alt="hamburger">
+                </div>
+            </div>
+
+        </article>
+    </section>
+
+    <section id="cardapio" class="cardapio">
+        <h2>Nosso Cardápio</h2>
+        <p>Escolha o seu favorito e peça agora!</p>
+
+        <ul class="menu-grid">
+            <!--Primeiro Card-->
+            <li>
+                <img src="https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                alt="burguer-classic">
+                 <span class="badge">Mais Vendido</span>
+                <h3>Burguer Clássico</h3>
+                <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
+                <strong>€ 5,43</strong>
+                <a href="https://wa.link/hqr4e9" class="btn">Fazer Pedido</a>
+            </li>
+
+            <!--Segundo Card-->
+             <li>
+                <img src="https://images.unsplash.com/photo-1624855600799-ac8e8bddd1da?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"               alt="burguer-classic">
+                 <span class="badge">Combo Max</span>
+                <h3>Burguer Max</h3>
+                <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
+                <strong>€ 9,93</strong>
+                <a href="https://wa.link/hqr4e9" class="btn">Fazer Pedido</a>
+            </li>
+
+            <!--Terceiro Card-->
+             <li>
+                <img src="https://plus.unsplash.com/premium_photo-1664648063548-50808d58f061?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"                alt="burguer-classic">
+                 <span class="badge">Vegetariano</span>
+                <h3>Burguer Veggie</h3>
+                <p>Pão Integral, hambúrguer de grão-de-bico, queijo vegano, alface, tomate e maionese vegana</p>
+                <strong>€ 6,43</strong>
+                <a href="https://wa.link/hqr4e9" class="btn">Fazer Pedido</a>
+            </li>
+
+            <!--Quarto Card-->
+             <li>
+                <img src="https://plus.unsplash.com/premium_photo-1666830497610-c303d845474e?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="burger">
+                <span class="badge">Em Alta</span>
+                <h3>SuperMax Burguer</h3>
+                <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
+                <strong>€ 19,33</strong>
+                <a href="https://wa.link/hqr4e9" class="btn">Fazer Pedido</a>
+            </li>
+
+            <!--Quinto Card-->
+             <li>
+                <img src="https://plus.unsplash.com/premium_photo-1683619761468-b06992704398?q=80&w=365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="burger">
+                <span class="badge">Double Burguer</span>
+                <h3>Double Burguer</h3>
+                <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
+                <strong>€ 22,33</strong>
+                <a href="https://wa.link/hqr4e9" class="btn">Fazer Pedido</a>
+            </li>
+
+            <!--Sexto Card-->
+             <li>
+                <img src="https://images.unsplash.com/photo-1639339474646-1e45134913bc?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img">
+                <span class="badge">Em Alta</span>
+                <h3>Simple Burguer</h3>
+                <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
+                <strong>€ 8,33</strong>
+                <a href="https://wa.link/hqr4e9" class="btn">Fazer Pedido</a>
+            </li>
+
+        </ul>
+    </section>
+
+    <h1 class="sobreh">Sobre Nós</h1>
+    <section id="sobre" class="sobre">
+        
+        <img src="https://images.unsplash.com/photo-1708915965102-a7d23583f4c3?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img">
+    
+        <article>
+            <h2>Nossa História</h2>
+            <p>Fundado em 2020, o BurguerDEV nasceu da paixão por hambúrgueres artesanais e ingredientes frescos. Nossa missão é oferecer uma experiência gastronômica única, combinando sabores clássicos com toques inovadores. Cada hambúrguer é preparado com cuidado e dedicação, garantindo qualidade e sabor incomparáveis. Venha nos visitar e descubra por que somos o destino favorito dos amantes de hambúrgueres!</p>
+      
+            <ul>
+                <li><strong>Carne Fresca</strong> - 100% Bovina selecionada</li>
+                <li><strong>Pães Artesanais</strong> - Feitos diariamente</li>
+                <li><strong>Ingredientes Locais</strong> - Apoio aos produtores locais</
+            </ul>
+            
+        </article>
+    </section>
+
+    <section id="cta">
+        <h2>Bateu a fome?</h2>
+        <p>Faça seu pedido agora mesmo!</p>
+        <a href="https://wa.link/hqr4e9" class="btn btn-light">  Pedir Pelo WhatsApp</a>
+    </section>
+    
+
+    <footer id="contato">
+        <section>
+            <h3>🍔DevBurgue</h3>
+            <p>Endereço: Rua dos Burgers, 123, Cidade Delícia</p>
+        </section> 
+
+        <section>
+            <h4>Horário</h4>
+            <p>Terça - Domingo</p>
+        </section>
+
+        <section>
+            <h3>Contato</h3>
+            <p>Telefone: (+244) 923-230-806</p>
+            <p>Guimarães, Azurém, Rua dos Mártires 1050</p>
+        </section>
+
+        <section>
+            <h4>Redes Sociais</h4>
+            <p><strong>Instagram</strong></p>
+            <p><strong>Facebook</strong></p>
+            <p><strong>Twitter</strong></p>
+        </section>
+
+        <p>&copy; 2025 IfraSites. Todos os direitos reservados.</p>
+
+    </footer>
+
+    
+</body>
+</html>

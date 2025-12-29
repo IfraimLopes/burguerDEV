@@ -1,0 +1,123 @@
+@media (max-width: 800px){
+    .howmobile{
+        display: none;
+    }
+
+
+    .btn-menu:hover{
+        border-radius: 50%;
+       background-color: #ff6b35;
+    }
+
+    .hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 20px;
+    }
+
+    .btn-m{
+        margin-left: -25px;
+        font-size: 18px;
+    }
+
+    .menu-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+    height: 3500px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: -40px;
+}
+
+.menu-grid li  img{
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.menu-grid li{
+    position: relative;
+    background-color: #fff;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: 0.4s;
+    text-align: left;
+}
+
+.hero h1{
+    font-size:48px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero  p{
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    margin: 5px;
+}
+
+.imga{
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 32% 68% 66% 34% / 62% 54% 46% 38%;
+    height: 350px;
+    width: 330px;
+    box-shadow: 0px 0px 0px 20px rgba(0,0,0,0.1);
+}
+
+.imga img{
+    width: 300px;
+    height: auto;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.sobre article p{
+    text-align: justify;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px 5%;
+    background-color: var(--dark);
+    color: #fff;
+}
+
+
+}
+
+@media (min-width: 800px){
+    .howDesktop{
+        display: none;
+    }
+
+    .howDesktop:hover{
+        border-radius: 50%;
+       background-color: #ff6b35;
+    }
+    
+}
+
