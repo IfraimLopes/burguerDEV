@@ -7,6 +7,9 @@
        backdrop-filter: blur(14px);
     }
 
+    .logo  {
+        font-size: 20px;
+    }
 
     .btn-menu:hover{
         border-radius: 50%;
