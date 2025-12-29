@@ -128,6 +128,8 @@ header{
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+      cursor: pointer;
 }
 
 .slidebar nav a:hover{
@@ -153,6 +155,7 @@ header nav{
 header nav a{
     font-weight: 350;
     transition: 0.4s;
+      cursor: pointer;
 }
 
 
@@ -174,7 +177,10 @@ header.scrolled{
    
 }
 
+.howDesktop{
 
+       cursor: pointer;
+}
 
 .hero{
     display: grid;
@@ -236,6 +242,7 @@ header.scrolled{
 .hero-stats li{
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .hero-stats li span{
