@@ -3,6 +3,10 @@
         display: none;
     }
 
+    .slidebar{
+       backdrop-filter: blur(14px);
+    }
+
 
     .btn-menu:hover{
         border-radius: 50%;
