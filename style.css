@@ -437,3 +437,42 @@ footer{
     background-color: var(--dark);
     color: #fff;
 }
+
+.lo{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6); /* fundo meio preto */
+}
+
+.Loading{
+    display: block;
+    width: 160px;
+    height: 160px;
+    background-color:transparent;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1000;
+    animation: loadingAnimation 1s linear infinite;
+    border: 20px solid var(--primary-color);
+    border-style: double;
+    border-top: 20px solid transparent;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

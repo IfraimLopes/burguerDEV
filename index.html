@@ -16,34 +16,35 @@
     <link rel="stylesheet" href="queriesmedia.css">
 </head>
 <body>
+    <div class="lo">
+        <span class="Loading"></span></div>
     <!--Área do Header-->
     <header>
-        <a href="#" class="logo">🍔Burguer</a>
+        <a href="#" class="logo" onclick="Load()">🍔Burguer</a>
         <!--Links de Navegação-->
         <nav>
-            <a href="#inicio" class="howmobile">Início</a>
-            <a href="#cardapio" class="howmobile">Cardápio</a>
-            <a href="#sobre" class="howmobile">Sobre</a>
-            <a href="#localizacao" class="howmobile">Localização</a>
-            <a href="#contato" class="howmobile">Contato</a>
-
-           <img onclick="showsibar()" class="howDesktop" src="img/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="brn">
+            <a href="#inicio" class="howmobile" onclick="LD()">Início</a>
+            <a href="#cardapio" class="howmobile" onclick="LD()">Cardápio</a>
+            <a href="#sobre" class="howmobile" onclick="LD()">Sobre</a>
+            <a href="#localizacao" class="howmobile" onclick="LD()">Localização</a>
+            <a href="#contato" class="howmobile" onclick="LD()">Contato</a>
+           <img onclick="showsibar()" class="howDesktop"  src="img/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="brn">
         </nav>
         <a href="#cardapio" class="btn howmobile">Peça Agora</a>
     </header>
 
      <header class="slidebar">
-        <img class="btn-menu" onclick="closesibar()" src="img/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="btn">
+        <img class="btn-menu" onclick="closesibar()"  src="img/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="btn">
           
         <!--Links de Navegação-->
         <nav>
-            <a href="#inicio">Início</a>
-            <a href="#cardapio">Cardápio</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-            <a href="#localizacao" >Localização</a>
+            <a href="#inicio" onclick="LD()">Início</a>
+            <a href="#cardapio" onclick="LD()">Cardápio</a>
+            <a href="#sobre" onclick="LD()">Sobre</a>
+            <a href="#contato" onclick="LD()">Contato</a>
+            <a href="#localizacao" onclick="LD()">Localização</a>
         </nav>
-        <a href="#cardapio" class="btn btn-m">Peça Agora</a>
+        <a href="#cardapio" class="btn btn-m" onclick="Load()">Peça Agora</a>
     </header>
 
 
@@ -55,8 +56,8 @@
                 <p>Ingredientes frescos e sabor incomparável, feito com amor para você!</p>
                 
                 <nav class="hero-buttons">
-                    <a href="#cardapio" class="btn">Cardápio</a>
-                    <a href="https://wa.link/hqr4e9" target="_blank" class="btn btn-outline">WhatsApp</a>
+                    <a href="#cardapio" class="btn" onclick="Load()">Cardápio</a>
+                    <a href="https://wa.link/hqr4e9" target="_blank" onclick="Load()" class="btn btn-outline">WhatsApp</a>
                 </nav>
            
                 <ul class="hero-stats">
@@ -89,7 +90,7 @@
                 <h3>Burguer Clássico</h3>
                 <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
                 <strong>€ 5,43</strong>
-                <a href="https://wa.link/hqr4e9" class="btn">Fazer Pedido</a>
+                <a href="https://wa.link/hqr4e9" onclick="Load()" class="btn">Fazer Pedido</a>
             </li>
 
             <!--Segundo Card-->
@@ -99,7 +100,7 @@
                 <h3>Burguer Max</h3>
                 <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
                 <strong>€ 9,93</strong>
-                <a href="https://wa.link/hqr4e9" class="btn">Fazer Pedido</a>
+                <a href="https://wa.link/hqr4e9" onclick="Load()" class="btn">Fazer Pedido</a>
             </li>
 
             <!--Terceiro Card-->
@@ -109,7 +110,7 @@
                 <h3>Burguer Veggie</h3>
                 <p>Pão Integral, hambúrguer de grão-de-bico, queijo vegano, alface, tomate e maionese vegana</p>
                 <strong>€ 6,43</strong>
-                <a href="https://wa.link/hqr4e9" class="btn">Fazer Pedido</a>
+                <a href="https://wa.link/hqr4e9" onclick="Load()" class="btn">Fazer Pedido</a>
             </li>
 
             <!--Quarto Card-->
@@ -119,7 +120,7 @@
                 <h3>SuperMax Burguer</h3>
                 <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
                 <strong>€ 19,33</strong>
-                <a href="https://wa.link/hqr4e9" class="btn">Fazer Pedido</a>
+                <a href="https://wa.link/hqr4e9" onclick="Load()" class="btn">Fazer Pedido</a>
             </li>
 
             <!--Quinto Card-->
@@ -129,7 +130,7 @@
                 <h3>Double Burguer</h3>
                 <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
                 <strong>€ 22,33</strong>
-                <a href="https://wa.link/hqr4e9" class="btn">Fazer Pedido</a>
+                <a href="https://wa.link/hqr4e9" onclick="Load()" class="btn">Fazer Pedido</a>
             </li>
 
             <!--Sexto Card-->
@@ -139,7 +140,7 @@
                 <h3>Simple Burguer</h3>
                 <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
                 <strong>€ 8,33</strong>
-                <a href="https://wa.link/hqr4e9" class="btn">Fazer Pedido</a>
+                <a href="https://wa.link/hqr4e9" onclick="Load()" class="btn">Fazer Pedido</a>
             </li>
 
         </ul>
@@ -167,15 +168,15 @@
     <section id="localizacao" class="localizacao">
         <h2>Onde nos Encontrar?</h2>
         <div class="mapa">
-            <iframe  class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019456789123!2d-122.4194156846812!3d37.77492977975967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b6c8b7b%3A0x4a4e4e4e4e4e4e4e!2sRua%20dos%20Burgers%2C%20123%2C%20Cidade%20Del%C3%ADcia!5e0!3m2!1spt-PT!2spt!4v1700000000000!5m2!1spt-PT!2spt" 
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="map" onclick="Load()" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2945.206644518872!2d-8.3057264345416!3d41.44588762581025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24efe6813d3725%3A0xc111e04954bb36f3!2sEst%C3%A1dio%20D.%20Afonso%20Henriques!5e0!3m2!1spt-PT!2spt!4v1767102999319!5m2!1spt-PT!2spt"
+         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
         </div>
     </section>
 
     <section id="cta">
         <h2>Bateu a fome?</h2>
         <p>Faça seu pedido agora mesmo!</p>
-        <a href="https://wa.link/hqr4e9" class="btn btn-light">  Pedir Pelo WhatsApp</a>
+        <a href="https://wa.link/hqr4e9" onclick="Load()" class="btn btn-light">  Pedir Pelo WhatsApp</a>
     </section>
     
 
@@ -192,8 +193,8 @@
 
         <section>
             <h3>Contato</h3>
-            <p>Telefone: (+244) 923-230-806</p>
-            <p>Guimarães, Azurém, Rua dos Mártires 1050</p>
+            <p onclick="Load()">Telefone:  (+351) 923-230-806</p>
+            <p>Guimarães, Dom Afonso Henriques</p>
         </section>
 
         <section>
