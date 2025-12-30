@@ -408,6 +408,27 @@ header.scrolled{
     font-size: 18px;
 }
 
+#localizacao{
+    padding: 80px 5%;
+    text-align: center;
+}
+
+#localizacao h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--radius);
+    width: 100%;
+}
+
 footer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
