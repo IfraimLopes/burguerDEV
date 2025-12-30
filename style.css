@@ -234,8 +234,6 @@ header.scrolled{
         transform: translateY(-20px);
     }
 
-
-
 }
 
 .hero img{
@@ -260,14 +258,7 @@ header.scrolled{
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    text-align: center;
-    background-color: #f0f0f0;
-    border-radius: var(--radius);
-   
 }
-
-
-
 
 .hero-stats li span{
     font-size: 14px;
@@ -275,7 +266,7 @@ header.scrolled{
 }
 
 .hero-stats strong{
-    font-size: 27px;
+    font-size: 24px;
     color: var(--primary-color);
 }
 
