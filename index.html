@@ -78,7 +78,7 @@
     </section>
 
     <section id="cardapio" class="cardapio">
-        <h2>Nosso Cardápio</h2>
+        <h2>Nossobtn Cardápio</h2>
         <p>Escolha o seu favorito e peça agora!</p>
 
         <ul class="menu-grid">
@@ -91,7 +91,11 @@
 
                 <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
                 <strong>€ 5,43</strong>
-                <a href="https://wa.link/hqr4e9" onclick="Load()" class="btn">Fazer Pedido</a>
+                <a href="#" class="btn fazer-pedido" 
+   data-nome="Burguer Clássico" 
+   data-descricao="Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese" 
+   data-preco="5.43">Fazer Pedido</a>
+
             </li>
 
             <!--Segundo Card-->
@@ -101,7 +105,13 @@
                 <h3>Burguer Max</h3>
                 <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
                 <strong>€ 9,93</strong>
-                <a href="https://wa.link/hqr4e9" onclick="Load()" class="btn">Fazer Pedido</a>
+
+                                <a href="#" class="btn fazer-pedido" 
+   data-nome="Combo Max" 
+   data-descricao="Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese" 
+   data-preco="9.93">Fazer Pedido</a>
+
+
             </li>
 
             <!--Terceiro Card-->
@@ -111,7 +121,11 @@
                 <h3>Burguer Veggie</h3>
                 <p>Pão Integral, hambúrguer de grão-de-bico, queijo vegano, alface, tomate e maionese vegana</p>
                 <strong>€ 6,43</strong>
-                <a href="https://wa.link/hqr4e9" onclick="Load()" class="btn">Fazer Pedido</a>
+                                <a href="#" class="btn fazer-pedido" 
+   data-nome="Burguer Veggie" 
+   data-descricao="Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese" 
+   data-preco="6.43">Fazer Pedido</a>
+
             </li>
 
             <!--Quarto Card-->
@@ -121,7 +135,11 @@
                 <h3>SuperMax Burguer</h3>
                 <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
                 <strong>€ 19,33</strong>
-                <a href="https://wa.link/hqr4e9" onclick="Load()" class="btn">Fazer Pedido</a>
+                                <a href="#" class="btn fazer-pedido" 
+   data-nome="SuperMax Burguer" 
+   data-descricao="Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese" 
+   data-preco="19,33">Fazer Pedido</a>
+
             </li>
 
             <!--Quinto Card-->
@@ -131,7 +149,11 @@
                 <h3>Double Burguer</h3>
                 <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
                 <strong>€ 22,33</strong>
-                <a href="https://wa.link/hqr4e9" onclick="Load()" class="btn">Fazer Pedido</a>
+                                <a href="#" class="btn fazer-pedido" 
+   data-nome="Double Burguer" 
+   data-descricao="Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese" 
+   data-preco="22,33">Fazer Pedido</a>
+
             </li>
 
             <!--Sexto Card-->
@@ -141,11 +163,16 @@
                 <h3>Simple Burguer</h3>
                 <p>Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese</p>
                 <strong>€ 8,33</strong>
-                <a href="https://wa.link/hqr4e9" onclick="Load()" class="btn">Fazer Pedido</a>
+                                <a href="#" class="btn fazer-pedido" 
+   data-nome="Simples Burguer" 
+   data-descricao="Pão Brioche, 180g de carne, queijo cheddar, alface, tomate e maionese" 
+   data-preco="8.33">Fazer Pedido</a>
+
             </li>
 
         </ul>
     </section>
+
 
     <h1 class="sobreh">Sobre Nós</h1>
     <section id="sobre" class="sobre">
@@ -215,4 +242,30 @@
 
     
 </body>
+
+<dialog id="modal">
+  <div class="content">
+    <h2 id="modal-nome">🍔 Nome do Burguer</h2>
+    <p id="modal-descricao">Descrição do hambúrguer</p>
+    <p><strong>Preço:</strong> €<span id="modal-preco">00,00</span> / unidade</p>
+
+    <hr>
+
+    <label for="qtd"><strong>Quantidade:</strong></label>
+    <input type="number" id="qtd" min="1" value="1">
+
+    <div class="totalpay">
+        <strong>Total a pagar:</strong>
+        <span id="total-amount">00,00€</span>
+    </div>
+
+    <div class="acoes">
+      <a id="modal-whatsapp" href="https://wa.link/hqr4e9" class="btn" onclick="LD()" target="_blank">Realizar Compra 🍔</a>
+      <button onclick="document.querySelector('#modal').close()">Fechar</button>
+    </div>
+  </div>
+</dialog>
+
+
+
 </html>

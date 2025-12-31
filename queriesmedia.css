@@ -115,6 +115,77 @@
     margin-bottom: 20px;
 }
 
+
+  /* Dialog ocupa quase toda a tela */
+  dialog {
+    width: 95%;
+    max-width: 360px; /* menor que desktop */
+    padding: 0;
+  }
+
+  /* Conteúdo */
+  .content {
+    padding: 16px;
+  }
+
+  /* Título menor */
+  .content h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Texto menor */
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  /* Input quantidade maior e centralizado */
+  .content input[type="number"] {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  /* Extras */
+  .extras-list {
+    flex-direction: column; /* de linha para coluna */
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .extras label {
+    font-size: 0.85rem;
+  }
+
+  /* Total a pagar */
+  .totalpay {
+    font-size: 1.1rem;
+  }
+
+  /* Botões */
+  .acoes .btn,
+  .acoes button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  /* Info final */
+  .info {
+    font-size: 0.8rem;
+  }
+
+  /* Animação */
+  @keyframes modalIn {
+    from {
+      transform: translate(-50%, -40%);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+}
+
+
 footer{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -132,7 +203,6 @@ article h2{
     text-align: center;
 }
 
-}
 
 @media (min-width: 800px){
     .howDesktop{
