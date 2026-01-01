@@ -54,6 +54,15 @@ function LD(){
     }, 1000);
 }
 
+// ===============================
+// VARIÁVEIS GLOBAIS DO PEDIDO
+// ===============================
+let nomeAtual = "";
+let precoAtual = 0;
+
+// ===============================
+// ELEMENTOS
+// ===============================
 const botoes = document.querySelectorAll('.fazer-pedido');
 const modal = document.getElementById('modal');
 const nomeModal = document.getElementById('modal-nome');
@@ -61,40 +70,60 @@ const descricaoModal = document.getElementById('modal-descricao');
 const precoModal = document.getElementById('modal-preco');
 const quantidade = document.getElementById('qtd');
 const totalAmount = document.getElementById('total-amount');
-const whatsappLink = document.getElementById('modal-whatsapp');
+const whatsappBtn = document.getElementById('modal-whatsapp');
 
-
-
-
+// ===============================
+// ABRIR MODAL
+// ===============================
 botoes.forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    
-    // Pega os dados do card
-    const nome = btn.dataset.nome;
+  btn.addEventListener('click', () => {
+
+    nomeAtual = btn.dataset.nome;
     const descricao = btn.dataset.descricao;
-    const preco = parseFloat(btn.dataset.preco);
+    precoAtual = parseFloat(btn.dataset.preco);
 
+    quantidade.value = 1;
 
-
-
-
-    // Preenche o modal
-    nomeModal.textContent = `🍔 ${nome}`;
+    nomeModal.textContent = `🍔 ${nomeAtual}`;
     descricaoModal.textContent = descricao;
-    precoModal.textContent = preco.toFixed(2);
-    totalAmount.textContent = preco.toFixed(2) + '€';
+    precoModal.textContent = precoAtual.toFixed(2);
+    totalAmount.textContent = precoAtual.toFixed(2) + '€';
 
-    // Atualiza link do WhatsApp com pedido (opcional)
-    whatsappLink.href = `https://wa.link/hqr4e9?text=Quero%20pedir%201%20x%20${encodeURIComponent(nome)}%20por%20${preco.toFixed(2)}€`;
-
-    // Mostra modal
     modal.showModal();
   });
 });
 
-// Atualiza total ao mudar quantidade
+// ===============================
+// ATUALIZAR TOTAL
+// ===============================
 quantidade.addEventListener('input', () => {
-  const preco = parseFloat(precoModal.textContent);
-  totalAmount.textContent = (preco * quantidade.value).toFixed(2) + '€';
+  const qtd = parseInt(quantidade.value) || 1;
+  const total = precoAtual * qtd;
+  totalAmount.textContent = total.toFixed(2) + '€';
+});
+
+// ===============================
+// ENVIAR WHATSAPP
+// ===============================
+whatsappBtn.addEventListener('click', () => {
+
+  const qtd = parseInt(quantidade.value);
+  if (qtd < 1 || isNaN(qtd)) {
+    alert("Digite uma quantidade válida");
+    return;
+  }
+
+  const total = (precoAtual * qtd).toFixed(2);
+
+  const mensagem = `
+Olá! Quero fazer um pedido 🍔
+
+Produto: ${nomeAtual}
+Quantidade: ${qtd}
+Preço unitário: ${precoAtual.toFixed(2)}€
+Total: ${total}€
+  `.trim();
+
+  const url = `https://wa.me/927217208?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, "_blank");
 });
