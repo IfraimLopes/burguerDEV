@@ -124,6 +124,6 @@ Preço unitário: ${precoAtual.toFixed(2)}€
 Total: ${total}€
   `.trim();
 
-  const url = `https://wa.me/927217208?text=${encodeURIComponent(mensagem)}`;
+const url = `https://wa.me/+244927217208?text=${encodeURIComponent(mensagem)}`;
   window.open(url, "_blank");
 });
