@@ -561,15 +561,15 @@ dialog {
   font-size: 1rem;
 }
 
-/* Extras */
-.extras {
-  
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 14px;
-  
+.content input[type="Text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
+
 
 .totalpay{
     margin-top: 10px;

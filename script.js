@@ -1,4 +1,4 @@
-//Mostrar y ocultar sidebar
+//Mostrar e ocultar sidebar
 function showsibar(){
     const slidebar = document.querySelector('.slidebar');
     slidebar.style.display = 'flex';
@@ -71,20 +71,18 @@ const precoModal = document.getElementById('modal-preco');
 const quantidade = document.getElementById('qtd');
 const totalAmount = document.getElementById('total-amount');
 const whatsappBtn = document.getElementById('modal-whatsapp');
+const NomeUser =  document.getElementById('name')
 
 // ===============================
 // ABRIR MODAL
 // ===============================
 botoes.forEach(btn => {
   btn.addEventListener('click', () => {
-
+  
     nomeAtual = btn.dataset.nome;
     const descricao = btn.dataset.descricao;
     precoAtual = parseFloat(btn.dataset.preco);
-
-    quantidade.value = 1;
-
-    nomeModal.textContent = `🍔 ${nomeAtual}`;
+   nomeModal// ⛔ PARA TUDO AQUI.textContent = `🍔 ${nomeAtual}`;
     descricaoModal.textContent = descricao;
     precoModal.textContent = precoAtual.toFixed(2);
     totalAmount.textContent = precoAtual.toFixed(2) + '€';
@@ -97,7 +95,7 @@ botoes.forEach(btn => {
 // ATUALIZAR TOTAL
 // ===============================
 quantidade.addEventListener('input', () => {
-  const qtd = parseInt(quantidade.value) || 1;
+  const qtd = parseInt(quantidade.value);
   const total = precoAtual * qtd;
   totalAmount.textContent = total.toFixed(2) + '€';
 });
@@ -105,12 +103,14 @@ quantidade.addEventListener('input', () => {
 // ===============================
 // ENVIAR WHATSAPP
 // ===============================
-whatsappBtn.addEventListener('click', () => {
+whatsappBtn.addEventListener('click', (e) => {
+  e.preventDefault(); //  BLOQUEIA O SUBMIT DO FORM
 
-  const qtd = parseInt(quantidade.value);
-  if (qtd < 1 || isNaN(qtd)) {
-    alert("Digite uma quantidade válida");
-    return;
+  const qtd = Number(quantidade.value);
+
+  if (!qtd || qtd <= 0) {
+    alert('[ERRO] Digite uma quantidade válida de hambúrguer!');
+    return; 
   }
 
   const total = (precoAtual * qtd).toFixed(2);
@@ -118,12 +118,14 @@ whatsappBtn.addEventListener('click', () => {
   const mensagem = `
 Olá! Quero fazer um pedido 🍔
 
+Nome: ${NomeUser.value}
 Produto: ${nomeAtual}
 Quantidade: ${qtd}
 Preço unitário: ${precoAtual.toFixed(2)}€
 Total: ${total}€
   `.trim();
 
-const url = `https://wa.me/+244927217208?text=${encodeURIComponent(mensagem)}`;
+  const url = `https://wa.me/+244927217208?text=${encodeURIComponent(mensagem)}`;
   window.open(url, "_blank");
 });
+
