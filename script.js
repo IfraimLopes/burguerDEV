@@ -1,3 +1,4 @@
+
 //Mostrar e ocultar sidebar
 function showsibar(){
     const slidebar = document.querySelector('.slidebar');
@@ -73,6 +74,15 @@ const totalAmount = document.getElementById('total-amount');
 const whatsappBtn = document.getElementById('modal-whatsapp');
 const NomeUser =  document.getElementById('name')
 
+const data = new Date();
+
+const dia = String(data.getDate()).padStart(2, '0');
+const mes = String(data.getMonth() + 1).padStart(2, '0');
+const ano = data.getFullYear();
+const hora = data.getHours();
+const min = String(data.getMinutes()).padStart(2, '0')
+const sec = String(data.getSeconds()).padStart(2, '0')
+
 // ===============================
 // ABRIR MODAL
 // ===============================
@@ -112,6 +122,12 @@ whatsappBtn.addEventListener('click', (e) => {
     alert('[ERRO] Digite uma quantidade válida de hambúrguer!');
     return; 
   }
+
+  if (!NomeUser.value || NomeUser.value.trim() === "") {
+    window.alert("Erro: Digite seu nome!");
+    return;
+  }
+
 
   const total = (precoAtual * qtd).toFixed(2);
 
